@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Pet World GDL | Inicio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@edteamlat">
+    <meta property="og:title" content="Inicio">
+    <meta property="og:description" content="PetWorld">
+    <meta property="og:image" content="https://ed.team/sites/default/files/EDboilerplate-logo.png">
+    <link rel="stylesheet" href="assets/fonts/styles.css?t=1555178559669">
+    <link rel="stylesheet" href="assets/css/styles.css?t=1555178559669">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <script src="assets/js/jquery.js?t=1555178559669"></script>
+    <script src="assets/js/slides.js?t=1555178559669"></script>
+  </head>
+  <body>
+    <header class="Header" id="Header"><a class="logo-link" href="./"><img class="Logo" src="assets/img/logo.svg" alt="Pet World Logo"></a>
+      <ul class="links-container">
+        <li><a href="#"><img src="assets/img/facebook-icon.svg" alt="Facebook Logo"></a></li>
+        <li><a href="#"><img src="assets/img/instagram-icon.svg" alt="instagram Logo"></a></li>
+        <li><a class="nav-link" href="#" id="nav-link"><img src="assets/img/nav-icon.svg" alt="nav Logo"></a></li>
+      </ul>
+      <nav class="main-menu" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation" id="main-menu">
+        <ul>
+          <li class="main-menu__item" itemprop="url"><a class="main-menu__link" href="./" itemprop="name">Inicio</a></li>
+          <li class="main-menu__item" itemprop="url"><a class="main-menu__link" href="hospital.html" itemprop="name">Hospital</a></li>
+          <li class="main-menu__item" itemprop="url"><a class="main-menu__link" href="tienda-estetica.html" itemprop="name">Tienda + Estética</a></li>
+          <li class="main-menu__item" itemprop="url"><a class="main-menu__link" href="promociones.html" itemprop="name">Promociones</a></li>
+          <li class="main-menu__item" itemprop="url"><a class="main-menu__link" href="contacto.html" itemprop="name">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="Main">
+      <div class="main-container slides" id="slides">
+        <div class="slide show" data-index="0"><img src="assets/img/4.jpg">
+          <div class="overlay-slide bg-hospital right"><img src="assets/img/hospital-slider-text.png"></div>
+        </div>
+        <div class="slide" data-index="1"><img src="assets/img/2.jpg">
+          <div class="overlay-slide bg-estetica left"><img src="assets/img/estetica-slider-text.png"></div>
+        </div>
+        <div class="slide" data-index="2"><img src="assets/img/6.jpg">
+          <div class="overlay-slide bg-tienda right"><img src="assets/img/tienda-slider-text.png"></div>
+        </div>
+        <div class="slide" data-index="3"><img src="assets/img/1.jpg">
+          <div class="overlay-slide bg-quirofano right"><img src="assets/img/quirofano-slider-text.png"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="Footer" id="Footer">
+      <p id="emergencyPhone">Emergencias 236422479 / 36422480</p>
+      <p id="emergencyPhonemobile">Emergencias <a href="tel:236422479">236422479 </a><span>/ </span><a href="tel:36422480">36422480</a></p>
+    </footer>
+    <script>
+      $(function(){
+        var headerHeight = $('.Header').outerHeight()
+        var footerHeight = $('.Footer').outerHeight()
+      
+        var slideHeight = $(window).height() - headerHeight - footerHeight
+        console.log( slideHeight)
+        $("#slides").slidesjs({
+          width: $(window).width(),
+          height: slideHeight,
+          play: {
+            active: false,
+              // [boolean] Generate the play and stop buttons.
+              // You cannot use your own buttons. Sorry.
+            effect: "fade",
+              // [string] Can be either "slide" or "fade".
+            interval: 5000,
+              // [number] Time spent on each slide in milliseconds.
+            auto: false,
+              // [boolean] Start playing the slideshow on load.
+            swap: true,
+              // [boolean] show/hide stop and play buttons
+            pauseOnHover: false,
+              // [boolean] pause a playing slideshow on hover
+            restartDelay: 2500
+              // [number] restart delay on inactive slideshow
+          }
+        });
+      });
+    </script>
+    <script src="assets/js/scripts-min.js?t=1555178559669"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Admin | Pet World GDL</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.png"/>
+    <link rel="stylesheet" href="../css/admin.css?t=1555178561004"/>
+    <script defer="defer" src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+  </head>
+  <body class="admin">
+    <header class="main-header">
+      <div class="container"><img src="../assets/img/logo.svg" alt="logo"/>
+        <button class="btn btn-close btn-danger" type="button" id="close-session"><span>
+            <i class="fas fa-sign-out-alt"></i>Cerrar Session</span></button>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="button-container">
+          <button class="btn btn-primary" type="button" data-href="modal" id="addNew"><span><i class="fas fa-plus"></i></span></button>
+        </div>
+        <div class="table-container">
+          <table class="promos" id="promos">
+            <thead>             
+              <th>Area</th>
+              <th>Promocion</th>
+              <th>Borrar</th>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <div class="modal modal-loading show" id="loading">
+      <div class="loading-container"><img src="../assets/img/Ripple-1s-200px.svg" alt=""/></div>
+    </div>
+    <script src="../js/admin-min.js?t=1555178561004"></script>
+  </body>
+</html>
